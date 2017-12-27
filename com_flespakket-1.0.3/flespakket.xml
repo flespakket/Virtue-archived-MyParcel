@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+    <name>com_flespakket</name>
+    <creationDate>2013-09-10</creationDate>
+    <copyright>Copyright (C) 2013. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Balticode</author>
+    <authorEmail>giedrius@balticode.com</authorEmail>
+    <authorUrl>www.balticode.com</authorUrl>
+    <version>1.0.3</version>
+    <description>FlesPakket</description>
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>flespakket.php</filename>
+	<filename>flespakket-passdata-virtuemart.html</filename>
+    </files>
+    
+    <administration>
+        <menu img="components/com_flespakket/assets/images/s_com_flespakket.png" >COM_FLESPAKKET</menu>
+        <submenu>
+            
+			<menu link="option=com_flespakket&amp;view=configs" view="configs" img="components/com_flespakket/assets/images/s_configs.png" alt="Flespakket/Configs">COM_FLESPAKKET_TITLE_CONFIGS</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>flespakket.php</filename>
+	    <filename>flespakket_plugin.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="administrator">
+            
+			<language tag="en-GB">language/en-GB.com_flespakket.ini</language>
+			<language tag="en-GB">language/en-GB.com_flespakket.sys.ini</language>
+        </languages>
+    </administration>
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.notwebdesign.com/joomla-component-creator/ -->
